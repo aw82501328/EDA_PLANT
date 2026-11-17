@@ -1,0 +1,176 @@
+.training-hero-lead { margin-top: 13px; color: #eef5ff; font-size: clamp(1.2rem, 2.3vw, 1.65rem); font-weight: 700; }
+.training-hero-outcomes {
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
+  gap: 5px;
+  min-height: 38px;
+  margin-top: 8px;
+  color: #eef5ff;
+  font-size: .93rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.training-hero-outcomes .icon { width: 15px; height: 15px; transform: rotate(90deg); }
+
+.training-content { display: grid; gap: clamp(38px, 5vw, 68px); padding-block: clamp(34px, 4.5vw, 60px) clamp(42px, 5vw, 70px); }
+.training-heading { margin-bottom: clamp(15px, 2vw, 23px); }
+.training-background-intro { max-width: 46em; margin: -8px 0 clamp(16px, 2vw, 24px); color: var(--muted); }
+.training-content h2[tabindex] { scroll-margin-top: 20px; }
+.training-feature, .training-book {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: clamp(22px, 4vw, 54px);
+  align-items: center;
+  padding: clamp(20px, 3.5vw, 42px);
+  border-radius: var(--radius);
+}
+
+.training-feature { border: 1px solid #d5e2f2; background: #eaf1fb; }
+.training-feature-intro .category-icon { color: white; background: #2455a4; }
+.training-feature-intro h3 { margin-block: 13px 8px; font-size: clamp(1.35rem, 2.6vw, 1.95rem); }
+.training-feature-intro p { max-width: 27em; color: var(--muted); }
+.training-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.training-tools li {
+  padding: 3px 10px;
+  border: 1px solid #c7d8ee;
+  border-radius: 5px;
+  color: #204782;
+  background: #f7faff;
+  font-size: .84rem;
+  font-weight: 700;
+}
+
+.training-path-heading { margin: 0 0 10px; color: var(--navy); font-size: 1rem; }
+.training-path {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: training-step;
+}
+
+.training-path li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 12px;
+  border: 1px solid #d7e2f0;
+  border-radius: 8px;
+  background: white;
+  counter-increment: training-step;
+}
+
+.training-path li::before {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 28px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  color: var(--blue);
+  background: var(--pale-blue);
+  font-size: .72rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  content: counter(training-step, decimal-leading-zero) / "";
+}
+
+.training-path strong { display: block; color: var(--navy); font-size: .94rem; line-height: 1.4; }
+.training-path p { margin-top: 3px; color: var(--muted); font-size: .86rem; }
+.training-card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.training-feature + .training-card-grid { margin-top: 16px; }
+.training-card-grid .focus-card { padding: clamp(16px, 2vw, 25px); }
+.training-modes .focus-card { border-top: 3px solid #acc5e6; }
+.training-specialties { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.training-packaging {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(14px, 3vw, 32px);
+}
+.training-packaging { align-items: center; margin-top: 16px; }
+.training-packaging .editorial-figure img { aspect-ratio: 1.8; object-fit: cover; }
+.training-photos-section { width: min(100%, 56rem); margin-inline: auto; }
+
+.training-book {
+  gap: 0;
+  align-items: stretch;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: white;
+}
+
+.training-book-title, .training-book-details { padding: clamp(20px, 3.5vw, 42px); }
+.training-book-title { background: linear-gradient(145deg, #e1ebf8, #f0f5fc); }
+.training-book-title .icon { width: 30px; height: 30px; color: var(--blue); }
+.training-book-title h3 { margin-block: 10px; font-size: clamp(1.2rem, 2.3vw, 1.7rem); line-height: 1.45; }
+.training-book-title p { max-width: 34em; color: var(--muted); font-size: .89rem; overflow-wrap: anywhere; }
+.training-book-details p { margin-bottom: 12px; color: var(--muted); }
+.training-book-details dl > div {
+  display: grid;
+  grid-template-columns: 5em minmax(0, 1fr);
+  gap: 7px;
+  padding-block: 9px;
+  border-top: 1px solid var(--line);
+  font-size: .92rem;
+}
+
+.training-book-details dt { font-weight: 700; }
+.training-book-details dd { color: var(--muted); }
+.training-timeline li { grid-template-columns: 3.4em minmax(0, 1fr); }
+
+.training-outcomes {
+  --outcomes-padding: clamp(15px, 3vw, 36px);
+  padding: var(--outcomes-padding);
+  border: 1px solid #cbdcf1;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #e4eefb, #f1f6fc);
+}
+#training-outcomes {
+  font-size: clamp(1.75rem, 3.6vw, 2.45rem);
+  scroll-margin-top: calc(var(--outcomes-padding) + 16px);
+}
+.training-outcomes-intro { max-width: 52em; margin: 8px 0 clamp(14px, 2vw, 22px); color: var(--muted); }
+.training-outcomes-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(12px, 2vw, 22px); }
+.training-outcomes-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: white;
+}
+.training-outcomes-copy { padding: clamp(14px, 2vw, 22px); }
+.training-outcomes-copy h3 { font-size: clamp(1.13rem, 1.8vw, 1.4rem); }
+.training-outcomes-copy .training-tools { margin-top: 10px; }
+.training-outcomes-copy p { margin-top: 9px; color: var(--muted); font-size: .9rem; }
+.training-outcomes-card .editorial-figure { margin-top: auto; padding: 0 clamp(9px, 1.2vw, 14px) 11px; }
+.training-outcomes-card img { aspect-ratio: 2; object-fit: cover; }
+
+@media (max-width: 850px) {
+  .training-feature { grid-template-columns: 1fr; }
+  .training-feature-intro p { max-width: none; }
+}
+
+@media (max-width: 700px) {
+  .training-book, .training-outcomes-grid { grid-template-columns: 1fr; }
+  .training-outcomes-card img { aspect-ratio: 16 / 9; }
+}
+
+@media (max-width: 600px) {
+  .training-card-grid, .training-path, .training-packaging { grid-template-columns: 1fr; }
+  .training-card-grid { gap: 10px; }
+}
